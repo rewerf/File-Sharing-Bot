@@ -7,7 +7,13 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 
+from os import environ
 
+API = environ.get("API", "20d0f5bcd1bbbc568a2ab2fd77d127729de8fa03") # shortlink api
+URL = environ.get("URL", "modijiurl.com") # shortlink domain without https://
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/+UpPeMSkqP55mMzVl") # how to open link 
+BOT_USERNAME = environ.get("BOT_USERNAME", "OreoBisk_bot") # bot username without @
+VERIFY = environ.get("VERIFY", "True") # set True Or False and make sure spelling is correct and first letter capital.
 
 #Bot token @Botfather
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
